@@ -70,3 +70,31 @@
 #highscoreBox {
     left: 50px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .body {
+        flex-direction: column;
+    }
+
+    #board {
+        width: 92vmin;
+        height: 92vmin;
+    }
+
+    #scoreBox, #highscoreBox {
+        position: static;
+        margin: 5px 0;
+        font-size: 24px;
+        width: auto;
+        text-align: center;
+    }
+
+    #scoreBox {
+        order: 1;
+    }
+
+    #highscoreBox {
+        order: 2;
+    }
+}
