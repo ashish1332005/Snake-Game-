@@ -11,12 +11,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    flex-direction: column;
+    padding: 10px;
 }
 
+/* Snake Board */
 #board {
-    background: linear-gradient(135deg, rgba(8, 54, 124, 0.78),hsla(240, 10.00%, 7.80%, 0.93),rgba(44, 20, 7, 0.92));
-    width: 90vmin;
-    height: 92vmin;
+    background: linear-gradient(135deg, rgba(8, 54, 124, 0.78), hsla(240, 10%, 7.8%, 0.93), rgba(44, 20, 7, 0.92));
+    width: min(90vmin, 100%);
+    height: min(92vmin, 100%);
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
@@ -27,23 +30,21 @@
 
 /* Snake Head */
 .head {
-    background: url(./R.png) no-repeat center center/cover;
+    background: url(.R.png) no-repeat center center/cover;
     width: 100%;
     height: 100%;
 }
 
 /* Snake Body */
 .snake {
-    background: url(./body.png) no-repeat center center/cover;
+    background: url(.body.png) no-repeat center center/cover;
     width: 100%;
     height: 100%;
 }
 
 /* Food */
 .food {
-    background: url(./apple.png) no-repeat center center/cover;
-
- 
+    background: url(.apple.png) no-repeat center center/cover;
     width: 100%;
     height: 100%;
 }
@@ -52,16 +53,15 @@
 #scoreBox, #highscoreBox {
     position: absolute;
     top: 10px;
-    font-size: 36px;
+    font-size: clamp(20px, 4vw, 36px);
     font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     color: white;
     text-shadow: 2px 2px 5px black;
     padding: 5px 15px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.4);
 }
-
 
 #scoreBox {
     right: 50px;
