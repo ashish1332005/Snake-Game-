@@ -15,6 +15,11 @@ const scoreBox = document.getElementById("scoreBox");
 const highscoreBox = document.getElementById("highscoreBox");
 
 
+document.addEventListener("touchstart", () => {
+    musicSound.play().catch(error => console.log("Autoplay Blocked:", error));
+}, { once: true });
+
+
 // Mobile Swipe Controls
 let touchStartX = 0, touchStartY = 0;
 document.addEventListener("touchstart", (e) => {
